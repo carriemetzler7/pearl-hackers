@@ -2,10 +2,12 @@
 <html>
 
 <head>
-    <title>Immigrant Resources</title>
+    <title>Amnesty Family</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
     <style>
         ul {
             list-style-type: disc;
@@ -18,10 +20,20 @@
 </head>
 
 <body>
+    <style>
+       #map {
+        height: 100%;
+      }
+       body {
+        background-color: #1c87c9;
+        font-family: Georgia, serif;
+
+        }
+      </style>
     <nav class="navbar has-background-white-ter level is-marginless" role="navigation" aria-label="main navigation">
         <div class="navbar-brand level-center">
             <a class="navbar-item title has-text-danger level-item">
-              <font color="#32CB8F">Immigrant Resources</font> 
+              <font color="#045EA2" size="7" >roots</font> 
                 
             </a>
         </div>
@@ -29,17 +41,17 @@
             <div class="control level-item">
                 <input class="input" type="text" placeholder="Search">
                 &nbsp;
-                <button style="background-color:#32CB8F; border:#32CB8F; color:white">Go</button>
+                <button style="background-color:#1c87c9; border:#1c87c9; color:white">Go</button>
                 &nbsp;
             </div>
         </div>
     </nav>
     <nav class="breadcrumb is-centered has-background-white-bis" aria-label="breadcrumbs">
         <ul>
-            <li><a href="#">Housing          </a></li>
-            <li><a href="#">Jobs         </a></li>
-            <li><a href="#">Healthcare          </a></li>
-            <li><a href="#">School           </a></li>
+            <li><a href="#"><font size="4">Housing          </font></a></li>
+            <li><a href="#"><font size="4">Jobs        </font> </a></li>
+            <li><a href="#"><font size="4">Healthcare        </font></a></li>
+            <li><a href="#"><font size="4">Schools        </font></a></li>
         </ul>
     </nav>
     <section class="section">
@@ -49,33 +61,22 @@
                     <div class="card-image">
                         <figure>
                             <img
-                                src="https://www.texasobserver.org/wp-content/uploads/2018/11/mg_8432-980x600.jpg">
+                                src="https://smtcenter.net/wp-content/uploads/2018/12/continents-world.jpg">
                         </figure>
+                        <br>
                         <div>
-                        <!DOCTYPE html>
-<html>
-  <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-
-  </body>
-</html>
+                        <div id="map"></div>
+                        <script>
+                          var map;
+                          function initMap() {
+                            map = new google.maps.Map(document.getElementById('map'), {
+                              center: {lat: -34.397, lng: 150.644},
+                              zoom: 8
+                            });
+                          }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqN8LiN5AOnogwfmaB6Bfo9rvd7oVBPo&callback=initMap"
+                        async defer></script>
                         </div>
 
                     </div>
@@ -143,6 +144,7 @@
             </div>
         </div>
     </footer>
-</body>
+  
+    </body>
 
 </html>
