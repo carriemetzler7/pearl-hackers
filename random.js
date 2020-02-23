@@ -1,11 +1,11 @@
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
-var raw = JSON.stringify({"q":["Non-Profit: Area-Raleigh, Durham, Chappel Hill school: Type in Your area code and the school map will show the schools that are nearby, if you need to enroll in school please contact us.   ","My name is Jeff"
+var raw = JSON.stringify({"q":["Roots is a website that connects immigrants from Lantinx countries with resources to ensure a smooth transition to the United States while staying connected to their roots. We provide the information of nearby immigrant resources, such as: school listings, medical clinics, outreach centers, and international stores. Our main purpose is to help immigrants get accustomed to their new lives and to have the proper resources that will make them feel at home"
 
 
 
-],"target":"de"});
+],"target":"es"});
 
 var requestOptions = {
   method: 'POST',
@@ -22,5 +22,3 @@ fetch("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBszLNj
       paragraph.innerHTML=result["data"]["translations"][0]["translatedText"]
   })
   .catch(error => console.log('error', error));
-
-
