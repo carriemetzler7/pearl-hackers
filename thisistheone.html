@@ -21,7 +21,7 @@
     <nav class="navbar has-background-white-ter level is-marginless" role="navigation" aria-label="main navigation">
         <div class="navbar-brand level-center">
             <a class="navbar-item title has-text-danger level-item">
-              <font color="#32CB8F">Imigrant Resources</font> 
+              <font color="#32CB8F">Immigrant Resources</font> 
                 
             </a>
         </div>
@@ -34,12 +34,12 @@
             </div>
         </div>
     </nav>
-    <nav class="breadcrumb is-left has-background-white-bis" aria-label="breadcrumbs">
+    <nav class="breadcrumb is-centered has-background-white-bis" aria-label="breadcrumbs">
         <ul>
-            <li><a href="#">Housing</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Healthcare</a></li>
-            <li class="is-active"><a href="#" aria-current="page">School</a></li>
+            <li><a href="#">Housing          </a></li>
+            <li><a href="#">Jobs         </a></li>
+            <li><a href="#">Healthcare          </a></li>
+            <li><a href="#">School           </a></li>
         </ul>
     </nav>
     <section class="section">
@@ -51,20 +51,32 @@
                             <img
                                 src="https://www.texasobserver.org/wp-content/uploads/2018/11/mg_8432-980x600.jpg">
                         </figure>
+                        <div>
+                        <div id="map"></div>
+                        <script>
+                          var map;
+                          function initMap() {
+                            map = new google.maps.Map(document.getElementById('map'), {
+                              center: {lat: -34.397, lng: 150.644},
+                              zoom: 8
+                            });
+                          }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe1oOEd06mc3ZI390XsizIcY3s4I1KRFc&callback=initMap"
+                        async defer></script>
+                        </div>
+
                     </div>
                     <div class="card-content">
                         <div class="media">
                             <div class="media-left">
                                 <figure class="image is-48x48">
-                                    <img src="https://www.texasobserver.org/wp-content/uploads/2018/11/mg_8432-980x600.jpg" alt="Placeholder image">
+                                    <img src="data:image/png;base64,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" alt="Placeholder image">
                                 </figure>
                             </div>
                             <div class="media-content">
                                 <h1 class="title">What is Immigrant Resources?</h1>
-                                <h2 class='subtitle'>From
-                                    <a href="https://www.tasteofhome.com/recipes/mom-s-fried-apples/">Taste of Home</a>
-                                </h2>
-                            </div>
+                           </div>
                         </div>
                         <div class="content">
                             <h3>What we do...</h3>
@@ -109,10 +121,10 @@
     <footer class='footer has-text-centered has-background-dark has-text-light'>
         <div class="columns">
             <div class="column">
-                Terms & Conditions
+                Contact Information
             </div>
             <div class="column">
-                © 2020 somehthing
+                © 2020 Pearl Hacks
             </div>
             <div class="column">
                 Privacy Policy
